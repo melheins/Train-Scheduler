@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Firebase JS File -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- Jumbotron Title -->
+<div class="content">
+    <div class="jumbotron bg-black">
+        <div class="container">
+            <h1 class="text-center">Train Scheduler<br>
+                <small></small>
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading bg-black">
+                        <h3 class="panel-title">Current Train Schedule</h3>
+                    </div>
+                    <div id="currentSched" class="panel-body">
+                        <table id="train-table" class="table">
+                            <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                            </thead>
+                            <tbody id="train-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading bg-black">
+                        <h3 class="panel-title">Add Train</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3"><label>Train Name</label>
+                                    <input type="text" class="form-control" placeholder="Train Name"
+                                           id="train-name-input">
+                                </div>
+                                <div class="col-md-3"><label>Destination</label>
+                                    <input type="text" class="form-control" placeholder="Destination"
+                                           id="destination-input">
+                                </div>
+                                <div class="col-md-3"><label>First Train Time</label>
+                                    <input id="first-train-time-input" type="time" class="form-control"
+                                           placeholder="00:00">
+                                </div>
+                                <div class="col-md-3"><label>Frequency (Min)</label>
+                                    <input type="number" class="form-control" placeholder="Frequency"
+                                           id="frequency-input">
+                                </div>
+                                <div class="col-12"><input class="btn btn-default" type="submit" value="Submit"
+                                                           id="add-new">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer ">
+    <div class="container ">
+        <p>&copy; Copyright 2017 Melanie Heins</p>
+    </div>
+</footer>
+<script type="text/javascript " src="assets/javascript/app.js "></script>
+
+</body>
+
+</html>
